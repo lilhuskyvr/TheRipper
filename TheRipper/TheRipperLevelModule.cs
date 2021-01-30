@@ -7,6 +7,8 @@ namespace TheRipper
 {
     public class TheRipperLevelModule : LevelModule
     {
+        public bool triggerRequired = false;
+
         public override IEnumerator OnLoadCoroutine(Level level)
         {
             EventManager.onCreatureSpawn += EventManagerOnonCreatureSpawn;
@@ -30,7 +32,10 @@ namespace TheRipper
             try
             {
                 var ragdollPart = handle.GetComponentInParent<RagdollPart>();
-                ragdollPart.ResetCharJointBreakForce();
+                if (ragdollPart.gameObject.GetComponent<FragileRagdollPart>() == null)
+                {
+                    UnityEngine.Object.Destroy(ragdollPart.gameObject.GetComponent<FragileRagdollPart>());
+                }
             }
             catch (Exception exception)
             {
@@ -43,8 +48,11 @@ namespace TheRipper
             try
             {
                 var ragdollPart = handle.GetComponentInParent<RagdollPart>();
-                if (!ragdollPart.name.Contains("Spine"))
-                    ragdollPart.characterJoint.breakForce = 1500;
+                if (ragdollPart.gameObject.GetComponent<FragileRagdollPart>() == null)
+                {
+                    var fragileRagdollPart = ragdollPart.gameObject.AddComponent<FragileRagdollPart>();
+                    fragileRagdollPart.Init(PlayerControl.GetHand(ragdollhand.side), triggerRequired);
+                }
             }
             catch (Exception exception)
             {
