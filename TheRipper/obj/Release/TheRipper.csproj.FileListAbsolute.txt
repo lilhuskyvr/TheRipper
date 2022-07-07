@@ -96,3 +96,6 @@ D:\Steam\steamapps\common\Blade & Sorcery\BladeAndSorcery_Data\StreamingAssets\M
 D:\Steam\steamapps\common\Blade & Sorcery\BladeAndSorcery_Data\StreamingAssets\Mods\TheRipper\TheRipper.dll
 D:\Steam\steamapps\common\Blade & Sorcery\BladeAndSorcery_Data\StreamingAssets\Mods\TheRipper\TheRipper.pdb
 D:\Steam\steamapps\common\Blade & Sorcery\BladeAndSorcery_Data\StreamingAssets\Mods\TheRipper\Level_TheRipper.json
+D:\Projects\RiderProjects\TheRipper\TheRipper\obj\Release\TheRipper.csprojResolveAssemblyReference.cache
+D:\Projects\RiderProjects\TheRipper\TheRipper\obj\Release\TheRipper.dll
+D:\Projects\RiderProjects\TheRipper\TheRipper\obj\Release\TheRipper.pdb

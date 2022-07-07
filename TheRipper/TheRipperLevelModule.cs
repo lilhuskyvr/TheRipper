@@ -9,10 +9,10 @@ namespace TheRipper
     {
         public bool triggerRequired = false;
 
-        public override IEnumerator OnLoadCoroutine(Level level)
+        public override IEnumerator OnLoadCoroutine()
         {
             EventManager.onCreatureSpawn += EventManagerOnonCreatureSpawn;
-            return base.OnLoadCoroutine(level);
+            return base.OnLoadCoroutine();
         }
 
         private void EventManagerOnonCreatureSpawn(Creature creature)
